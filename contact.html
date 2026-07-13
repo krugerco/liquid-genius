@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Liquid Genius</title>
+  <meta name="description" content="Start a conversation with Liquid Genius about AI software, innovation sprints, or team training.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Build &middot; Think &middot; Teach</span>
+      <span>Replies within <b>one business day</b></span>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Liquid Genius logo — a light bulb in a liquid glass">
+        <span class="word">Liquid&nbsp;<em>Genius</em></span>
+      </a>
+      <input type="checkbox" id="navtoggle">
+      <label class="burger" for="navtoggle" aria-label="Menu"><span></span><span></span><span></span></label>
+      <nav class="main">
+        <a href="software.html">Software</a>
+        <a href="innovation.html">Innovation</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta here">Start a conversation</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="kicker">Contact</p>
+      <h1>Two sentences is <em>plenty.</em></h1>
+      <p class="lede">Tell us what&rsquo;s slow, stuck, or interesting. We read everything ourselves and reply within one business day — usually with a question, occasionally with a sketch.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap contact-grid">
+      <div class="info">
+        <div class="item">
+          <h3>Email</h3>
+          <a href="mailto:lane@krugercoproductions.com">lane@krugercoproductions.com</a>
+        </div>
+        <div class="item">
+          <h3>What to include</h3>
+          <p>The problem in your own words, roughly how many people it touches, and any deadline. Skip the formalities.</p>
+        </div>
+        <div class="item">
+          <h3>Not sure which practice you need?</h3>
+          <p>Neither are most people at this stage. Send the problem — routing it is our job, not yours.</p>
+        </div>
+      </div>
+
+      <form class="contact" action="mailto:lane@krugercoproductions.com" method="post" enctype="text/plain">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="topic">What&rsquo;s this about?</label>
+        <select id="topic" name="topic">
+          <option>Building software</option>
+          <option>An innovation sprint</option>
+          <option>Training / classes</option>
+          <option>Something else</option>
+        </select>
+
+        <label for="msg">The problem, in your own words</label>
+        <textarea id="msg" name="message" rows="6" required></textarea>
+
+        <button class="btn solid" type="submit">Send it over</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="word">Liquid&nbsp;<em>Genius</em></div>
+          <p>An AI software, innovation, and teaching company. We build the tools, find the ideas, and teach the skills.</p>
+        </div>
+        <div>
+          <h4>Practice</h4>
+          <ul>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="innovation.html">Innovation</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Say hello</h4>
+          <ul>
+            <li><a href="mailto:lane@krugercoproductions.com">lane@krugercoproductions.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fine">
+        <span>&copy; 2026 Liquid Genius. All rights reserved.</span>
+        <span>Designed &amp; built in-house.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

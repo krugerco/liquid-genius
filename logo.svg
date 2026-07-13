@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 144" fill="none">
+  <!-- Liquid Genius — light bulb in a liquid glass -->
+  <!-- liquid -->
+  <path d="M27.9 84 C36 78.5 44 89 52 84 C60 79 68 89 76 84 C83 79.6 89 87 92.2 83.5 L88.9 128 C88.7 131 86.8 132.5 83.5 132.5 L36.5 132.5 C33.2 132.5 31.3 131 31.1 128 Z" fill="#EE5F1C" opacity="0.92"/>
+  <!-- bulb glass -->
+  <circle cx="60" cy="56" r="23" fill="#FBF8F2" stroke="#1F41BE" stroke-width="5"/>
+  <!-- filament -->
+  <path d="M52 64 L55 55 L60 62 L65 55 L68 64" stroke="#EE5F1C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- bulb neck -->
+  <path d="M52.5 77 L51.5 84 L68.5 84 L67.5 77" fill="#FBF8F2" stroke="#1F41BE" stroke-width="4.5" stroke-linejoin="round"/>
+  <line x1="52" y1="90" x2="68" y2="90" stroke="#1F41BE" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="54" y1="96" x2="66" y2="96" stroke="#1F41BE" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- rays -->
+  <line x1="60" y1="20" x2="60" y2="10" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+  <line x1="34" y1="32" x2="27" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+  <line x1="86" y1="32" x2="93" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+  <!-- glass tumbler -->
+  <path d="M24 40 L30.5 129 C30.9 134 33.5 137 38.5 137 L81.5 137 C86.5 137 89.1 134 89.5 129 L96 40" stroke="#10203E" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- bubbles -->
+  <circle cx="44" cy="104" r="3.4" fill="#FBF8F2" opacity="0.85"/>
+  <circle cx="74" cy="114" r="2.6" fill="#FBF8F2" opacity="0.85"/>
+  <circle cx="56" cy="121" r="2" fill="#FBF8F2" opacity="0.7"/>
+</svg>
