@@ -325,6 +325,43 @@ footer.site li a { font-size: 15px; text-decoration: none; color: var(--ink); }
 footer.site li a:hover { color: var(--orange); }
 footer.site .fine { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: rgba(16, 32, 62, 0.5); }
 
+/* ---------- animations ---------- */
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* hero intro (on page load) */
+.hero .kicker    { animation: rise-in 0.7s ease-out both; }
+.hero .display   { animation: rise-in 0.7s ease-out 0.12s both; }
+.hero .lede      { animation: rise-in 0.7s ease-out 0.24s both; }
+.hero .actions   { animation: rise-in 0.7s ease-out 0.36s both; }
+.hero-art        { animation: rise-in 0.9s ease-out 0.3s both; }
+
+/* gentle float for the hero glass */
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.hero-art img, .hero-art svg { animation: bob 5s ease-in-out infinite; }
+
+/* scroll reveals (elements get .reveal via script.js) */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* livelier hovers */
+.card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(16, 32, 62, 0.1); }
+.svc .go { transition: transform 0.2s ease, color 0.15s ease; }
+.svc:hover .go { transform: translateX(6px); }
+.brand img { transition: transform 0.25s ease; }
+.brand:hover img { transform: rotate(-8deg) scale(1.06); }
+.btn:active { transform: translateY(0) scale(0.98); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .kicker, .hero .display, .hero .lede, .hero .actions, .hero-art,
+  .hero-art img, .hero-art svg, .card, .svc .go, .brand img { animation: none; transition: none; }
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 920px) {

@@ -1,23 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 144" fill="none">
-  <!-- Liquid Genius — light bulb in a liquid glass -->
-  <!-- liquid -->
-  <path d="M27.9 84 C36 78.5 44 89 52 84 C60 79 68 89 76 84 C83 79.6 89 87 92.2 83.5 L88.9 128 C88.7 131 86.8 132.5 83.5 132.5 L36.5 132.5 C33.2 132.5 31.3 131 31.1 128 Z" fill="#EE5F1C" opacity="0.92"/>
-  <!-- bulb glass -->
-  <circle cx="60" cy="56" r="23" fill="#FBF8F2" stroke="#1F41BE" stroke-width="5"/>
-  <!-- filament -->
-  <path d="M52 64 L55 55 L60 62 L65 55 L68 64" stroke="#EE5F1C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <!-- bulb neck -->
-  <path d="M52.5 77 L51.5 84 L68.5 84 L67.5 77" fill="#FBF8F2" stroke="#1F41BE" stroke-width="4.5" stroke-linejoin="round"/>
-  <line x1="52" y1="90" x2="68" y2="90" stroke="#1F41BE" stroke-width="4.5" stroke-linecap="round"/>
-  <line x1="54" y1="96" x2="66" y2="96" stroke="#1F41BE" stroke-width="4.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 140" fill="none">
+  <!-- Liquid Genius — light bulb in a rocks glass -->
+  <style>
+    @keyframes lg-slosh { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-14px); } }
+    @keyframes lg-rise  { 0% { transform: translateY(0); opacity: 0; } 18% { opacity: .9; } 82% { opacity: .8; } 100% { transform: translateY(-34px); opacity: 0; } }
+    @keyframes lg-glow  { 0%,100% { opacity: .25; } 50% { opacity: .7; } }
+    @keyframes lg-rays  { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+    .lg-liquid  { animation: lg-slosh 3.4s ease-in-out infinite; }
+    .lg-glow    { animation: lg-glow 2.8s ease-in-out infinite; }
+    .lg-rays    { animation: lg-rays 2.8s ease-in-out infinite; }
+    .lg-b1 { animation: lg-rise 2.6s linear infinite; }
+    .lg-b2 { animation: lg-rise 3.3s linear .9s infinite; }
+    .lg-b3 { animation: lg-rise 2.9s linear 1.7s infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .lg-liquid, .lg-glow, .lg-rays, .lg-b1, .lg-b2, .lg-b3 { animation: none; }
+    }
+  </style>
+
+  <defs>
+    <!-- interior of the tumbler: straight sides, slight taper, above the thick base -->
+    <clipPath id="lg-clip">
+      <path d="M27 30 L33 111 L95 111 L101 30 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- warm glow behind the bulb -->
+  <circle class="lg-glow" cx="64" cy="54" r="30" fill="#F9A825" opacity="0.35"/>
+
+  <!-- liquid + bubbles, clipped to the glass interior -->
+  <g clip-path="url(#lg-clip)">
+    <path class="lg-liquid" d="M13 76 C21 71 29 81 37 76 C45 71 53 81 61 76 C69 71 77 81 85 76 C93 71 101 81 109 76 C117 71 125 81 133 76 L133 111 L13 111 Z" fill="#EE5F1C" opacity="0.92"/>
+    <circle class="lg-b1" cx="46" cy="104" r="3.2" fill="#FBF8F2" opacity="0.85"/>
+    <circle class="lg-b2" cx="76" cy="108" r="2.4" fill="#FBF8F2" opacity="0.85"/>
+    <circle class="lg-b3" cx="61" cy="106" r="1.9" fill="#FBF8F2" opacity="0.7"/>
+  </g>
+
+  <!-- light bulb -->
+  <circle cx="64" cy="54" r="21" fill="#FBF8F2" stroke="#1F41BE" stroke-width="5"/>
+  <path d="M57 61 L60 53 L64 59 L68 53 L71 61" stroke="#EE5F1C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M57.5 73.5 L56.5 80 L71.5 80 L70.5 73.5" fill="#FBF8F2" stroke="#1F41BE" stroke-width="4.2" stroke-linejoin="round"/>
+  <line x1="57" y1="86" x2="71" y2="86" stroke="#1F41BE" stroke-width="4.2" stroke-linecap="round"/>
+  <line x1="59" y1="92" x2="69" y2="92" stroke="#1F41BE" stroke-width="4.2" stroke-linecap="round"/>
+
   <!-- rays -->
-  <line x1="60" y1="20" x2="60" y2="10" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
-  <line x1="34" y1="32" x2="27" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
-  <line x1="86" y1="32" x2="93" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
-  <!-- glass tumbler -->
-  <path d="M24 40 L30.5 129 C30.9 134 33.5 137 38.5 137 L81.5 137 C86.5 137 89.1 134 89.5 129 L96 40" stroke="#10203E" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-  <!-- bubbles -->
-  <circle cx="44" cy="104" r="3.4" fill="#FBF8F2" opacity="0.85"/>
-  <circle cx="74" cy="114" r="2.6" fill="#FBF8F2" opacity="0.85"/>
-  <circle cx="56" cy="121" r="2" fill="#FBF8F2" opacity="0.7"/>
+  <g class="lg-rays">
+    <line x1="64" y1="21" x2="64" y2="12" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+    <line x1="41" y1="31" x2="35" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+    <line x1="87" y1="31" x2="93" y2="25" stroke="#EE5F1C" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- rocks glass: straight-ish sides, heavy bottom -->
+  <path d="M24 26 L31.5 113 L96.5 113 L104 26" stroke="#10203E" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- thick base -->
+  <path d="M31.5 113 L30.5 127 C30.4 130 32.5 132 35.5 132 L92.5 132 C95.5 132 97.6 130 97.5 127 L96.5 113" stroke="#10203E" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="#10203E" fill-opacity="0.12"/>
+  <!-- base shine -->
+  <line x1="40" y1="122.5" x2="60" y2="122.5" stroke="#10203E" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
 </svg>
