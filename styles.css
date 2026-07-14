@@ -311,6 +311,28 @@ form.contact input:focus, form.contact select:focus, form.contact textarea:focus
 }
 form.contact button { margin-top: 28px; width: 100%; cursor: pointer; font-family: var(--sans); }
 
+/* ---------- hero signup form + mini pillars ---------- */
+
+.mini-pillars { margin-top: 36px; display: flex; gap: 34px; flex-wrap: wrap; }
+.mini-pillars div { display: flex; flex-direction: column; gap: 2px; padding-left: 14px; border-left: 3px solid var(--orange); }
+.mini-pillars b { font-family: var(--serif); font-size: 19px; }
+.mini-pillars span { font-size: 13.5px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(16, 32, 62, 0.55); }
+
+.hero-form {
+  position: relative;
+  border: 1.5px solid var(--rule-strong);
+  border-radius: 6px;
+  background: #fff;
+  padding: 34px 30px 30px;
+  box-shadow: 10px 10px 0 rgba(31, 65, 190, 0.08);
+}
+.hero-form .form-mark { width: 54px; height: 54px; position: absolute; top: -27px; right: 24px; background: var(--paper); border: 1.5px solid var(--rule-strong); border-radius: 50%; padding: 6px; }
+.hero-form h3 { font-size: 24px; line-height: 1.15; }
+.hero-form .sub { margin: 8px 0 18px; font-size: 14.5px; color: rgba(16, 32, 62, 0.65); }
+.hero-form form.contact { border: none; border-radius: 0; background: transparent; padding: 0; }
+.hero-form form.contact label { margin-top: 14px; }
+.hero-form form.contact button { margin-top: 20px; }
+
 /* ---------- footer ---------- */
 
 footer.site { border-top: 2px solid var(--rule-strong); padding: 56px 0 40px; }
@@ -338,6 +360,8 @@ footer.site .fine { margin-top: 48px; padding-top: 18px; border-top: 1px solid v
 .hero .lede      { animation: rise-in 0.7s ease-out 0.24s both; }
 .hero .actions   { animation: rise-in 0.7s ease-out 0.36s both; }
 .hero-art        { animation: rise-in 0.9s ease-out 0.3s both; }
+.hero-form       { animation: rise-in 0.9s ease-out 0.3s both; }
+.mini-pillars    { animation: rise-in 0.7s ease-out 0.48s both; }
 
 /* gentle float for the hero glass */
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
@@ -367,6 +391,7 @@ footer.site .fine { margin-top: 48px; padding-top: 18px; border-top: 1px solid v
 @media (max-width: 920px) {
   .hero .grid, .feature, .contact-grid { grid-template-columns: 1fr; }
   .hero-art { order: -1; }
+  .hero-form { margin-top: 16px; }
   .hero-art svg { max-width: 220px; }
   .svc { grid-template-columns: 56px 1fr; }
   .svc p { grid-column: 2; }
