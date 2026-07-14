@@ -6,7 +6,7 @@
     ".section-head", ".svc", ".card", ".feature > *", ".step",
     ".stats", ".pull blockquote", ".pull cite",
     ".band h2", ".band p", ".band .btn",
-    ".contact-grid .info", "form.contact",
+    ".contact-grid .info", ".contact-grid form.contact",
     ".page-hero .kicker", ".page-hero h1", ".page-hero .lede"
   ];
 
